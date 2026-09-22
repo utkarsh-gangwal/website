@@ -1,33 +1,415 @@
-<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Utkarsh Gangwal</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Utkarsh Gangwal | Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-  <div class="panel">
-    <h1>Unwinding Networked Infrastructure <br> Complexities</h1>
-    <div class="home-buttons">
-      <a href="about.html" class="home-btn">About</a>
-      <a href="project-list.html" class="home-btn">Research</a>
-      <a href="publications.html" class="home-btn">Publications</a>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeBtn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <span id="themeLabel">Dark</span>
+    </button>
+  </nav>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+
+      <!-- Left column: centred profile (no canvas) -->
+      <div class="left-col" id="leftCol">
+        <div class="left-content">
+          <img src="images/Utkarsh Gangwal.jpg" alt="[NAME]" class="avatar-img"/>
+          <div class="left-name">Utkarsh Gangwal, Ph.D.</div>
+          <div class="left-title">Postdoctoral Research Associate</div>
+          <div class="left-inst">University of Virginia</div>
+          <div class="icon-links">
+            <a href="mailto:hth6tk@virginia.edu" class="icon-link" title="Email" aria-label="Email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/utkarsh4499/" target="_blank" class="icon-link" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=6wmTl1MAAAAJ&hl=en" target="_blank" class="icon-link" title="Google Scholar" aria-label="Google Scholar">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 1 12 20.055a11.952 11.952 0 0 1-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: bio + three sub-columns -->
+      <div class="right-col" id="rightCol">
+        <h2 class="section-title">About Me</h2>
+        <p class="bio-text">
+              I am a Postdoctoral Research Associate in the Civil Engineering Department at the University of Virginia, working in the lab 
+              of <a href="https://engineering.virginia.edu/faculty/majid-shafiee-jood" class="inline-link" target="_blank">Dr. Majid Shafiee-Jood</a>. 
+              My research focuses on evacuation modeling, behavioral analysis, and disaster AI.
+              <br>
+              <br>
+              I completed my Ph.D. from the University of Delaware under the guidance of Dr. Shangjia Dong at the 
+              <a href="https://shangjiadong.github.io/index.html" class="inline-link" target="_blank">Dong Research Lab</a>, and 
+              received multiple research awards along with Doctoral Fellowship for Excellence. My doctoral 
+              research, titled “Integrating Adaptive Capacity in Interdependent Human-Infrastructure Systems for Disaster Resilience,” 
+              examined how human behavior and large-scale infrastructure systems interact during disasters and how household adaptive 
+              capacity can be incorporated into resilience planning. I was also affiliated with the 
+              <a href="https://drc.udel.edu/" class="inline-link" target="_blank">Disaster Research Center</a>, a hub for 
+              interdisciplinary disaster science scholars and practitioners.
+              <br>
+              <br>
+              I completed my undergraduate studies in Civil Engineering with honors at the Indian Institute of Technology Gandhinagar 
+              (IITGN). I was awarded the Director’s Gold Medal for outstanding overall performance and the Institute Gold Medal for 
+              achieving the highest cumulative performance index in my discipline. During my time at IITGN, I worked under the guidance 
+              of <a href="https://iitgn.ac.in/faculty/civil/fac-udit" class="inline-link" target="_blank">Dr. Udit Bhatia</a> 
+              in the Machine Intelligence & Resilience Lab, where I studied robust and resilient networked infrastructure systems.
+
+        </p>
+        <div class="three-cols">
+          <div class="col-block">
+            <h4>Research Interests</h4>
+            <ul>
+              <li>Interdependent Human-Infrastructure Modeling</li>
+              <li>Evacuation Modeling</li>
+              <li>Disaster AI</li>
+              <li>Behavior Analysis</li>
+              <li>Community Resilience</li>
+            </ul>
+          </div>
+          <div class="col-block">
+            <h4>Education</h4>
+            <div class="edu-item">
+              <div class="edu-degree">PhD, Transportation and Civil Infrastructure Systems</div>
+              <div class="edu-year">2021 - 2026</div>
+              <div class="edu-inst">University of Delaware</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">BTech, Civil Engineering</div>
+              <div class="edu-year">2017 - 2021</div>
+              <div class="edu-inst">IIT Gandhinagar</div>
+            </div>
+          </div>
+          <div class="col-block">
+            <h4>Methods</h4>
+            <ul>
+              <li>Network Modeling</li>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>Optimization</li>
+              <li>Survey Analysis & Econometric Modeling</li>
+              <li>Agentic AI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="particles-js" id="particles-js"></div>
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
-  <script src="particles.js"></script>
-  <script src="app.js"></script>
+  </section>
+
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="section-inner">
+      <h2 class="section-title">Research</h2>
+      <div class="research-grid">
+
+        <div class="research-item">
+          <div class="research-fig">
+            <img src="images/research_1.jpg" alt=" "/>
+          </div>
+          <div class="research-text">
+            <div class="research-subtitle">Coupled Human-Infrastructure Systems</div>
+            <p class="research-desc">Coupled human-infrastructure systems capture the intricate interdependencies between communities 
+              and the infrastructure they rely on. These systems are shaped by how individuals and communities 
+              use infrastructure, depend on it, and experience its failures, especially during times of 
+              disruption. Disasters often expose disparities in resilience, as households—such as 
+              those with limited mobility, economic resources, or access to services—face heightened risks 
+              due to their constrained ability to prepare for, respond to, and recover from events.
+              <br>
+              <br>
+              My research focuses on developing modeling frameworks that simulate these interdependencies to 
+              better understand the dynamics of socio-technical systems. Using system dynamics and complex 
+              network-based approaches, we explore both infrastructure-to-human and human-to-infrastructure 
+              feedback during disasters. This integration enables us to analyze how human behavior affects 
+              infrastructure performance and vice versa, ultimately offering insights into how targeted 
+              interventions can enhance community resilience.</p>
+          </div>
+        </div>
+
+        <div class="research-item">
+          <div class="research-fig">
+            <img src="images/research_2.jpg" alt=" "/>
+          </div>
+          <div class="research-text">
+            <div class="research-subtitle">Household Adaptation and Predictive Modeling</div>
+            <p class="research-desc">Households depend on infrastructure systems for essential services, and during disruptions, 
+              they often adapt by adjusting their demand or supplementing supply to lessen the impact. 
+              These adaptations—whether planned or spontaneous—play a critical role in maintaining 
+              household functioning and resilience, serving as a bridge between infrastructure performance 
+              and community well-being during crises. Understanding these behaviors is vital for supporting 
+              equitable and effective disaster response.
+              <br>
+              <br>
+              This research aims to characterize and predict household adaptations during infrastructure 
+              service interruptions using econometric models and machine learning techniques. By capturing 
+              how and when households implement various adaptations, the study provides insights for 
+              system operators, emergency managers, and community organizations to better incorporate 
+              adaptive behaviors into planning, restoration efforts, and resource allocation.</p>
+          </div>
+        </div>
+
+        <div class="research-item">
+          <div class="research-fig">
+            <img src="images/research_3.jpg" alt=" "/>
+          </div>
+          <div class="research-text">
+            <div class="research-subtitle">Critical Facility Accessibility and Road Criticality</div>
+            <p class="research-desc">Critical facility accessibility is essential for disaster response and recovery, yet road 
+            networks often provide uneven access across communities. Disruptions such as flooding can 
+            isolate populations from essential services or significantly increase travel times, 
+            disproportionately affecting communities at risk. This research adopts an integrated 
+            network-based approach to evaluate accessibility by accounting for partial road failures, 
+            multiple types of critical facilities, and changes in travel time during flood events.
+            <br>
+            <br>
+            Some roads play a disproportionately important role in maintaining access to these critical 
+            facilities. To increase disaster resilience, my work involves identifying the most critical 
+            roads for protection and early recovery. While certain segments are frequently used in 
+            post-flood travel routes, others are vital for preserving access to avoid formation of 
+            service deserts. My research combines complex network-based approaches with optimization 
+            techniques on large-scale networks to identify and prioritize essential roads for 
+            protection and early recovery.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-tag">2025-2026</div>
+          <div class="project-title-row">
+            <div class="project-title">Modeling cascading failure in human-infrastructure system during hurricane</div>
+            <!-- <a href="[PROJECT_URL]" target="_blank" class="project-link-icon" aria-label="View project">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a> -->
+          </div>
+          <p class="project-body" id="pb2">The study involves developing coupled human-infrastructure system to model the cascading failures 
+            across households, workplaces, and services provided to the wider community during disaster events. A data-fusion framework is 
+            developed using optimization techniques, statistical methods, and deep neural network, to construct the multilayered network 
+            using various datasets, including the synthetic population, NSI building data, LEHD LODES data, and human mobility-data. The 
+            household adaptative capacity to work disruption is integrated to evaluate the reduced workforce and impact to communities that 
+            rely on various services.</p>
+          <button class="read-more" onclick="toggleRead('pb2', this)">Read more ↓</button>
+          <div class="project-meta"><span>Dr. Shangjia Dong</span><span>Ongoing</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">2023 - 2024</div>
+          <div class="project-title-row">
+            <div class="project-title">Multi-event cross-region analysis of household adaptation to infrastructure service disruption</div>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214629625002439" target="_blank" class="project-link-icon" aria-label="View project">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://link.springer.com/article/10.1007/s44212-025-00082-y" target="_blank" class="project-link-icon" aria-label="View project">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="project-body" id="pb1">This project investigated household adaptation to infrastructure service disruptions across 
+            multiple disaster events and geographic regions. Mixed logit models were used to examine how adaptation decisions are associated 
+            with outage duration and individual characteristics, while cross-region comparisons assessed the prevalence of different 
+            adaptations under both past experiences and anticipated future disasters. The models were also evaluated for their ability to 
+            predict the number of individuals likely to adopt specific adaptations, providing insights into household behavioral responses 
+            to prolonged infrastructure disruptions.</p>
+          <button class="read-more" onclick="toggleRead('pb1', this)">Read more ↓</button>
+          <div class="project-meta"><span>Dr. Shangjia Dong, Dr. Rachel Davidson, Dr. James Kendra, Dr. Bradley Ewing</span><span>Completed</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">2025-2026</div>
+          <div class="project-title-row">
+            <div class="project-title">Modeling workforce disruption through household adaptation during hurricanes</div>
+            <!-- <a href="[PROJECT_URL]" target="_blank" class="project-link-icon" aria-label="View project">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a> -->
+          </div>
+          <p class="project-body" id="pb3">A cluster-specific XGBoost framework was developed to predict household changes in work 
+            participation during hurricane events. Using household survey data from North Carolina and Florida, the study examined how 
+            infrastructure disruptions, job characteristics, employer constraints, and competing household responsibilities shape 
+            work-related decisions. Supporting adaptations, including strategies for managing and reallocating caregiving responsibilities, 
+            were analyzed across different time periods to understand how households sustain work participation. The predictive framework 
+            was evaluated across time intervals and industries to assess its ability to capture variations in household responses.</p>
+          <button class="read-more" onclick="toggleRead('pb3', this)">Read more ↓</button>
+          <div class="project-meta"><span>Dr. Shangjia Dong</span><span>Completed</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-tag">2022</div>
+          <div class="project-title-row">
+            <div class="project-title">Critical facility accessibility and road criticality assessment during flooding</div>
+            <a href="https://www.tandfonline.com/doi/full/10.1080/23789689.2022.2149184" target="_blank" class="project-link-icon" aria-label="View project">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <p class="project-body" id="pb4">The project assessed accessibility disparities to critical facilities across Delaware under flooding 
+            scenarios that account for partial road failures. A depth-disruption function was integrated into travel-time calculations to 
+            quantify changes in accessibility, while a modified betweenness centrality measure was used to identify roads critical for 
+            maintaining access to critical facilities for both the transportation network and census block groups. A weighted criticality 
+            metric was also developed to identify flooded roads that are particularly important for reconnecting disconnected communities 
+            and restoring access to critical facilities.</p>
+          <button class="read-more" onclick="toggleRead('pb4', this)">Read more ↓</button>
+          <div class="project-meta"><span>Dr. Shangjia Dong, Dr. AR Siders, Dr. Jennifer Horney</span><span>Completed</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-inner">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="pub-section">
+        <div class="pub-section-title">Journal Articles</div>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Lights out, decisions on: How households adapt to power outages across regions and events. <em>Utkarsh Gangwal, Rithika Dulam, Shangjia Dong, Rachel A Davidson, James Kendra, Bradley Ewing, Adam Andresen.</em></div>
+              <div class="pub-meta">Energy Research & Social Science · 2025 · <a href="https://doi.org/10.1016/j.erss.2025.104162", target="_blank">doi:10.1 016/j.erss.2025.104162</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Living with and without water: modeling human-infrastructure interactions in disaster preparedness. <em>Utkarsh Gangwal, Shangjia Dong, Fengyan Shi.</em></div>
+              <div class="pub-meta">Urban Informatics · 2025 · <a href="https://doi.org/10.1007/s44212-025-00072-0", target="_blank">doi:10.1007/s44212-025-00072-0</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">A deep generative framework for joint households and individuals population synthesis. <em>Xiao Qian, Utkarsh Gangwal, Shangjia Dong, Rachel Davidson.</em></div>
+              <div class="pub-meta">Applied Soft Computing · 2025 · <a href="https://doi.org/10.48550/arXiv.2407.01643", target="_blank">doi:10.48550/arXiv.2407.01643</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Characterizing and predicting household adaptations to electric power outages. <em>Rithika Dulam, Utkarsh Gangwal, Rachel A Davidson, Shangjia Dong, Bradley Ewing, James Kendra, Adam Andresen.</em></div>
+              <div class="pub-meta">Urban Informatics · 2025 · <a href="https://doi.org/10.1007/s44212-025-00082-y", target="_blank">doi:10.1007/s44212-025-00082-y</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Flood inundation and isolation differentially impact access to dialysis care. <em>Jennifer A Horney, Utkarsh Gangwal, Shangjia Dong.</em></div>
+              <div class="pub-meta">American journal of disaster medicine · 2024 · <a href="https://doi.org/10.5055/ajdm.0490", target="_blank">doi:10.5055/ajdm.0490</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Critical facility accessibility and road criticality assessment considering flood-induced partial failure. <em>Utkarsh Gangwal, AR Siders, Jennifer Horney, Holly A Michael, Shangjia Dong.</em></div>
+              <div class="pub-meta">Sustainable and Resilient Infrastructure · 2023 · <a href="https://doi.org/10.1080/23789689.2022.2149184", target="_blank">doi:10.1080/23789689.2022.2149184</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Characterizing resilience of flood-disrupted dynamic transportation network through the lens of link reliability and stability. <em>Shangjia Dong, Xinyu Gao, Ali Mostafavi, Jianxi Gao, Utkarsh Gangwal.</em></div>
+              <div class="pub-meta">Reliability Engineering & System Safety · 2023 · <a href="https://doi.org/10.1016/j.ress.2022.109071", target="_blank">doi:10.1016/j.ress.2022.109071</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Ensuring access to opioid treatment program services among Delawareans vulnerable to flooding. <em>Jennifer A Horney, Sarah Elizabeth Scales, Urkarsh Gangwal, Shangjia Dong.</em></div>
+              <div class="pub-meta">Delaware Journal of Public Health · 2023 · <a href="https://djph.org/wp-content/uploads/2023/06/djph-92-024.pdf", target="_blank">doi:10.32481/djph.2023.06.024</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Critical facility accessibility rapid failure early-warning detection and redundancy mapping in urban flooding. <em>Utkarsh Gangwal, Shangjia Dong.</em></div>
+              <div class="pub-meta">Reliability Engineering & System Safety · 2022 · <a href="https://doi.org/10.1016/j.ress.2022.108555", target="_blank">doi:10.1016/j.ress.2022.108555</a></div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Identifying early-warning indicators of onset of sudden collapse in networked infrastructure systems against sequential disruptions. <em>Utkarsh Gangwal, Mayank Singh, Pradumn Kumar Pandey, Deepak Kamboj, Samrat Chatterjee, Udit Bhatia.</em></div>
+              <div class="pub-meta">Physica A: Statistical Mechanics and its Applications · 2022 · <a href="https://doi.org/10.1016/j.physa.2021.126796", target="_blank">doi:10.1016/j.physa.2 021.126796</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-section">
+        <div class="pub-section-title">Conference Proceedings</div>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Are opioid treatment programs ready for disaster? the growing risk of flood-associated isolation. <em>Jennifer Horney, Shangjia Dong, Utkarsh Gangwal.</em></div>
+              <div class="pub-meta">APHA 2024 Annual Meeting and Expo · 2024 </div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Fire Station Accessibility, Assessment, and Improvement Considering Probabilistic Road Failure in Facing Flooding. <em>Jiaji Ma, Utkarsh Gangwal, Shangjia Dong.</em></div>
+              <div class="pub-meta">ASCE Inspire · 2023 · Washington DC · <a href="https://ascelibrary.org/doi/abs/10.1061/9780784485163.096", target="_blank">doi:10.1061/9780784485163.096</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-section">
+        <div class="pub-section-title">Survey Instruments</div>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <svg class="pub-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div>
+              <div class="pub-title">Survey Instruments to Collect Revealed and Stated Preferences for Household Adaptations & Unhappiness During Extreme Events. <em> </em></div>
+              <div class="pub-meta">DesignSafe · 2025 · <a href="https://doi.org/10.17603/ds2-35nr-pj53", target="_blank">doi:10.17603/ds2-35nr-pj53</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>© 2026 Utkarsh Gangwal</footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
